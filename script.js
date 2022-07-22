@@ -27,10 +27,10 @@ function playRound(a, b) {
         console.log(lose);
     } else if (a == b) {
         console.log("Hmm.. " + a + " versus " + b + ", interesting..");
-    } else if (a !== "Paper" || a !== "Scissors" || a !== "Rock") {
+    } else if (a !== "Paper" && a !== "Scissors" && a !== "Rock") {
         console.log("I said rock, paper, scissors only, not.. " + a + "...");
     } else {
-        console.log("You Win!" + a + " beats " + b + "!");
+        console.log("You Win! " + a + " beats " + b + "!");
     }
 }
 
