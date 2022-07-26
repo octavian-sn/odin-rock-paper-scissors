@@ -16,23 +16,29 @@ function getPlayerChoice() {
 //let playerChoice = getPlayerChoice();
 
 function playRound(a, b) {
-    //let lose = "You Lose! " + b + " beats " + a +"!";
-    //let win = "You Win! " + a + " beats " + b + "!";
-    //let tie = "Hmm.. " + a + " versus " + b + ", interesting..";
+    let loseMsg = "You Lose! " + b + " beats " + a +"!";
+    let winMsg = "You Win! " + a + " beats " + b + "!";
+    let tieMsg = "Hmm.. " + a + " versus " + b + ", interesting..";
     let lose = "lose";
     let win = "win";
     let tie = "tie";
     if (a == "Rock" && b == "Paper") {
+        console.log(loseMsg);
         return(lose);
     } else if (a == "Paper" && b == "Scissors") {
+        console.log(loseMsg);
         return(lose);
     } else if (a == "Scissors" && b == "Rock") {
+        console.log(loseMsg);
         return(lose);
     } else if (a == b) {
+        console.log(tieMsg);
         return(tie);
     } else if (a !== "Paper" && a !== "Scissors" && a !== "Rock") {
+        console.log(tieMsg);
         return(tie);
     } else {
+        console.log(winMsg);
         return(win);
     }
 }
@@ -53,13 +59,13 @@ function game() {
         }
     }
     if (playerScore > computerScore) {
-        console.log("You won the game!");
+        console.log("\n ~~~You won the game!~~~");
     }   else if (playerScore < computerScore) {
-        console.log("Oh no, you lost the game!");
+        console.log("\n ~Oh no, you lost the game!~");
     }   else {
-        console.log("Better luck next time!");
+        console.log("\n ~Better luck next time!~");
     }
 }
 
-console.log(game());
+game();
 
