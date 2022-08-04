@@ -1,4 +1,3 @@
-
 function getComputerChoice() {
     let choices = ["Rock", "Paper", "Scissors"];
     let random = Math.floor(Math.random() * choices.length);
@@ -6,68 +5,62 @@ function getComputerChoice() {
     return(computerChoice);
 }
 
-function getPlayerChoice() {
-    let input = prompt ("Choose your weapon: rock, paper or scissors!");
-    let playerChoice = (input.charAt(0). toUpperCase()) + (input.slice(1). toLowerCase());
-    return(playerChoice);
-}
-
-//let computerChoice = getComputerChoice();
-//let playerChoice = getPlayerChoice();
+var round = 0;
+var humanScore = 0;
+var roboScore = 0;
 
 function playRound(a, b) {
+    round += 1;
+    var message = '';
     let loseMsg = "You Lose! " + b + " beats " + a +"!";
     let winMsg = "You Win! " + a + " beats " + b + "!";
-    let tieMsg = "Hmm.. " + a + " versus " + b + ", interesting..";
-    let lose = "lose";
-    let win = "win";
-    let tie = "tie";
+    let tieMsg = "It's a tie! " + a + " versus " + b;
     if (a == "Rock" && b == "Paper") {
-        console.log(loseMsg);
-        return(lose);
+        message = loseMsg;
+        roboScore += 1;
+        scoreBoard.textContent = `${message}
+        The score is: You-${humanScore} Computer-${roboScore}`
     } else if (a == "Paper" && b == "Scissors") {
-        console.log(loseMsg);
-        return(lose);
+        message = loseMsg;
+        roboScore += 1;
+        scoreBoard.textContent = `${message} 
+        The score is: You-${humanScore} Computer-${roboScore}`
     } else if (a == "Scissors" && b == "Rock") {
-        console.log(loseMsg);
-        return(lose);
+        message = loseMsg;
+        roboScore += 1;
+        scoreBoard.textContent = `${message} 
+        The score is: You-${humanScore} Computer-${roboScore}`
     } else if (a == b) {
-        console.log(tieMsg);
-        return(tie);
-    } else if (a !== "Paper" && a !== "Scissors" && a !== "Rock") {
-        console.log(tieMsg);
-        return(tie);
+        message = tieMsg;
+        scoreBoard.textContent = `${message} 
+         The score is: You-${humanScore} Computer-${roboScore}`
     } else {
-        console.log(winMsg);
-        return(win);
+        message = winMsg;
+        humanScore += 1;;
+        scoreBoard.textContent = `${message} 
+        The score is: You-${humanScore} Computer-${roboScore}`
+    }
+    if (humanScore == 5 ) {
+        humanScore = 0;
+        roboScore = 0;
+        scoreBoard.textContent = "Congratulations! You won!!!"
+    }
+    if (roboScore == 5 ) {
+        humanScore = 0;
+        roboScore = 0;
+        scoreBoard.textContent = "Oh my! Computers are taking over the world!!!"
     }
 }
 
-//console.log(playRound(playerChoice, computerChoice));
+const rock = document.querySelector('#rock');
+rock.addEventListener('click', function(){ playRound("Rock", getComputerChoice())});
 
-function game() {
-    var playerScore = 0;
-    var computerScore = 0;
-    for (let i = 0; i < 5; i++) {
-        var result = playRound(getPlayerChoice(), getComputerChoice());
-        if (result == "win") {
-            console.log("Well done! The score is: You - " + (playerScore += 1) +
-             ", Computer - " + computerScore);
-        } else if (result == "lose") {
-            console.log("At least you tried! The score is: You - " + playerScore +
-             ", Computer - " + (computerScore += 1));
-        } else {
-            console.log("This is a tie! The score is: You - " + playerScore +
-             ", Computer - " + computerScore)
-        }
-    }
-    if (playerScore > computerScore) {
-        console.log("\n ~~~You won the game!~~~");
-    }   else if (playerScore < computerScore) {
-        console.log("\n ~Oh no, you lost the game!~");
-    }   else {
-        console.log("\n ~Better luck next time!~");
-    }
-}
+const paper = document.querySelector('#paper');
+paper.addEventListener('click', function(){ playRound("Paper", getComputerChoice())});
 
-game();
+const scissors = document.querySelector('#scissors');
+scissors.addEventListener('click', function(){ playRound("Scissors", getComputerChoice())});
+
+const content = document.querySelector('#content');
+const scoreBoard = document.createElement('h3');
+content.appendChild(scoreBoard);
