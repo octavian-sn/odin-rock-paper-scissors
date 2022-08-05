@@ -1,0 +1,53 @@
+[33mcommit 247d4c868b183d737a2739906e4787d318601f58[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;32mrps-ui[m[33m)[m
+Author: Sulic Octavian <octavius1992@gmail.com>
+Date:   Thu Aug 4 17:00:36 2022 +0300
+
+    Add UI to the game
+
+[33mcommit bc740247f66e4dc1e7b43d40a96632e2196047f2[m[33m ([m[1;31morigin/rps-ui[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Sulic Octavian <octavius1992@gmail.com>
+Date:   Tue Jul 26 13:28:04 2022 +0300
+
+    Clean up code
+
+[33mcommit 0a8610a58cdc3ee8bc29af23eb2f7cdb98c9c0fb[m
+Author: Sulic Octavian <octavius1992@gmail.com>
+Date:   Tue Jul 26 11:33:24 2022 +0300
+
+    Re-add the 'weapons' messages
+
+[33mcommit 6d28ebf02b2f340930edf01e2976ef4504313480[m
+Author: Sulic Octavian <octavius1992@gmail.com>
+Date:   Tue Jul 26 11:15:38 2022 +0300
+
+    Add game function
+
+[33mcommit 273c9124cd2ae9f66eb5b8293fa7570862352174[m
+Author: Sulic Octavian <octavius1992@gmail.com>
+Date:   Fri Jul 22 17:25:57 2022 +0300
+
+    Fix return message for random player input
+
+[33mcommit 7b7273cdff7e2123f87b88e4c25961fbe7523f30[m
+Author: Sulic Octavian <octavius1992@gmail.com>
+Date:   Fri Jul 22 16:35:09 2022 +0300
+
+    Complete play function
+
+[33mcommit f09d33d55a11e2439136e0f00740576da95a4efb[m
+Author: Sulic Octavian <octavius1992@gmail.com>
+Date:   Fri Jul 22 16:00:39 2022 +0300
+
+    Add user/computer input and first round functions
+
+[33mcommit 37a34dd89454eb81108899f8a33b9e21a62f8e5b[m
+Author: Sulic Octavian <octavius1992@gmail.com>
+Date:   Wed Jul 20 09:05:58 2022 +0300
+
+    Add html and js files
+
+[33mcommit dc084ff4c0e489ad4313405ac94979b316327ce9[m
+Author: Octavian Șulic <55620950+octavian-sn@users.noreply.github.com>
+Date:   Tue Jul 19 16:34:06 2022 +0300
+
+    Initial commit
